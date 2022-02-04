@@ -17,3 +17,7 @@ console.table(objPersona['nombre']);
 console.table(objPersona.nombre);
 /*De esta manera eliminamos algo del objeto o directamente el objeto*/
 delete objPersona.casado;
+/*De esta recorremos el objeto*/
+for (let key in objPersona) {
+    console.log(`${key}, value=${objPersona[key]}`);
+}

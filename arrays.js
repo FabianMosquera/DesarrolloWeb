@@ -25,3 +25,5 @@ _array.shift();
 _array.splice(1,1);
 //Saber en que posición se encuentra un elemento existente
 console.log(_array.indexOf('Hola'));
+//Copiar un array
+let _array2 = [... _array];  

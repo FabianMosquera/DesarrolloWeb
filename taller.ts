@@ -46,19 +46,25 @@ let _cuenta: Cuenta = new Cuenta('Jaimito', 12);
 console.log(_cuenta.cantidad);
 */
 
+const sexo: string = {
+    valor = 'H',
+};
+
 class Persona {
     private _nombre: string;
     private _edad: number;
     private _dni: string;
     private _peso: number;
     private _altura: number;
+    private _sexo: sexo;
 
-    constructor(nombre:string, edad:number, dni:string, peso:number, altura:number) {
+    constructor(nombre:string, edad:number, dni:string, peso:number, altura:number, sexo:sexo.valor) {
         this._nombre = nombre;
         this._edad = edad;
         this._dni = dni;
         this._peso = peso;
         this._altura = altura;
+        this._sexo = sexo
     }
 
     get nombre(): string {
@@ -80,10 +86,6 @@ class Persona {
         return this._dni;
     }
 
-    set dni(newDni: string) {
-        this._dni = newDni;
-    }
-
     get peso(): number {
         return this._peso;
     }
@@ -95,8 +97,15 @@ class Persona {
         return this._altura;
     }
 
-    set altura(newAltura: string) {
+    set altura(newAltura: number) {
         this._altura = newAltura;
+    }
+
+    get sexo(): sexo {
+        return this._sexo;
+    }
+    set sexo(newSexo: sexo) {
+        this._sexo = newSexo;
     }
 
     esMayorDeEdad(edad:number): boolean {
@@ -107,5 +116,18 @@ class Persona {
         }
     }
 
-    comprobarSexo()
+    comprobarSexo(sexo:sexo.valor): void {
+        if (sexo!=='H') {
+            this._sexo['valor'] = 'H';
+        }
+    }
+    
+    toString(): string {
+        return `nombre=${this._nombre} edad=${this._edad} dni=${this._dni} peso=${this._peso} dni=${this._altura} sexo=${this._sexo}`;
+    }
+
+    static generarCedula(): number {
+        return Math.floor(Math.random() * (99999999 - 10000000)) + 10000000
+    }
+
 }

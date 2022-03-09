@@ -124,8 +124,10 @@ class Empleado extends Persona {
 
         if(this._salario < 13000000){
             console.log("Salario menor al salario integral");
+            //Esto no representa un uso para la función
         }else{
             console.log("Salario Mayor al salario integral");
+            //Esto no representa un uso para la función
         }
     }
 }

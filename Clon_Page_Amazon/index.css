@@ -11,6 +11,7 @@ body {
     ". aside main main" auto
     "footer footer footer footer" 200px /
     200px 300px auto auto;
+  gap: 5px;
 }
 .wrapper {
   max-width: 98%;
@@ -175,6 +176,7 @@ header .logo-img {
   background: #232f3e;
   width: 100%;
   height: auto;
+  padding: 9px 0;
 }
 .contenedor-2 {
   display: flex;
@@ -187,16 +189,49 @@ header .logo-img {
   margin: 0;
   padding: 0;
   color: white;
-  margin-top: 7px;
+  margin: auto 0;
 }
 
 .svg-menu {
   color: white;
   height: 20px;
   width: 20px;
-  margin-top: 7px;
+  margin: auto 0;
   margin-right: -20px;
 }
+
+.container-header3 {
+  background: white;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 1px 5px rgb(190, 190, 190);
+  padding: 9px 0;
+}
+
+.contenedor3{
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: space-between;
+  padding: 0 188px;
+}
+
+.contenedor3 p, .dropdown{
+  margin: auto 0;
+}
+
+.dropbtn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem;
+  background: #F0F2F2;
+  box-shadow: 0 0 1px 1px rgb(192, 192, 192);
+}
+
+.change-color{
+  color: #C85500;
+}
+
 /*ASIDE*/
 
 aside {
